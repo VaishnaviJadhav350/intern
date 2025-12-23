@@ -1,0 +1,560 @@
+Daily Writing
+Week 1:
+Day 1:
+
+1. Learn about Virtualization and how to manage and make virtual environment (Docker)
+- What is Virtualization?
+  Virtualization means creating a virtual version of something (like a computer, operating system, or server) using software.
+  Example:
+  One physical computer
+  Runs multiple virtual systems at the same time
+
+- What is Docker?
+  Docker is a tool used to: Create, Run, Manage containers
+  used: Apps run same on every system
+
+2. Git commands on GitHub -> connect virtual environment 
+			     to create simple repository and push
+   Steps How to push repository:- 
+🔹 Step 1: Initialize Git (only first time)
+	   -> git init
+
+🔹 Step 2: Add files to staging area
+	   -> git add .
+	(Adds all files)
+
+🔹 Step 3: Commit changes
+	git commit -m "Initial commit"
+
+🔹 Step 4: Connect to remote repository
+	git remote add origin https://github.com/username/repository-name.git
+
+🔹 Step 5: Push code to GitHub
+	git push -u origin main
+
+(or use master if your branch name is master)
+
+🔹 If Repository Already Exists (Quick Push)
+	git add .
+	git commit -m "Updated files"
+	git push
+====================================================================================
+Day 2:
+
+1.Basics of Python
+  - Python Features:
+  	Simple & readable syntax
+  	Interpreted language
+  	Platform independent
+  	Large standard library
+
+  - Syntax:
+	print("Hello, World!")
+
+  - Indentation:
+  	Python uses indentation instead of brackets {}.
+    	Indentation is used to define blocks of code.
+
+  - Variables:
+	A variable is a name given to a memory location to store data.
+	a = 10
+	name = "Python"
+	
+  -Data Types:
+	Data type specifies the type of data stored in a variable.
+
+	Data Type	Description
+	int		Integer values
+	float		Decimal values
+	str		String values
+	bool		True or False
+	list		Ordered, mutable
+	tuple		Ordered, immutable
+	dict		Key-value pair
+
+  - Operators:
+   	Perform the mathematical operations 
+   	Types : Arithmetic operator (+,-,*,/,%)
+            	Relational/Comparison Operator (<,>,<=,>=,==,!=) 
+            	Assignment Operator (=,+=,-=,*=,/=)
+            	Logical Operator (AND, OR, NOT)
+
+  # Arithmetic Operator
+	a=23
+	b=45
+	print("Addition = ", a+b)
+	print("Substract = ", b-a)
+	print("Multiply = ", a*b)
+	print("Divide = ", a/b)
+	print("Module = ", a%b)
+
+  # Relational Operator(Comparison)
+	a = 10
+	b = 5
+	print(a > b)    
+	print(a < b)    
+	print(a >= b)   
+	print(a <= b)   
+	print(a == b)   
+	print(a != b)   
+
+  # Logical Operator
+	a = 1
+	b = 0
+	print(a and b)
+	print(a or b)
+	print(not a)
+
+  # Assignment Operator
+	a = 10
+	a += 5
+	print("Answer is",a)   
+	a -= 3
+	print("Answer is",a)     
+	a *= 2
+	print("Answer is",a)    
+	a /= 4
+	print("Answer is",a)
+-------------------------------------------------------------------------------------------------------------
+2. Decision Making 
+ 
+  Decision making statements are used to control the flow of execution of a program based on conditions.
+  Python uses if, if-else, elif, and nested if statements for decision making. 
+  
+  - if Statement:-
+    The if statement executes a block of code only when the condition is True.
+
+    Syntax: 
+	if condition:
+    		statement(s)
+  -------------------------------
+  -if–else Statement:-
+   The if-else statement executes one block if the condition is True, otherwise executes the else block.
+
+   Syntax:
+	if condition:
+    		statement(s)
+	else:
+    		statement(s) 
+  ----------------------------------
+  -if–elif–else Statement:-
+   The elif statement is used to check multiple conditions.
+
+   Syntax:
+	if condition1:
+    		statement(s)
+	elif condition2:
+    		statement(s)
+	else:
+    		statement(s) 
+====================================================================================================
+
+Day 3:
+
+1. Loops:-
+
+ - Loops in Python are used to repeat actions efficiently.
+    Types: For loop
+           While loop
+
+   #....For Loop....
+   The for loop is used when we know how many times the loop should run.
+   
+   Syntax: 
+	for variable in sequence:
+    		statement(s)
+   ------------------------------------
+   	# Print 1 to 5 numbers
+
+	for i in range(1, 6):
+    		print(i)
+  ==========================================
+   #....While....
+   The while loop runs as long as a condition is true.
+   
+   Syntax:
+	while condition:
+    		statement(s)
+   ------------------------------------
+	# print 1 to 5 numbers
+
+	i = 1
+	while i <= 5:
+    		print(i)
+    		i = i + 1
+   ==========================================
+
+   #....break....
+   Stops the loop completely.
+   
+   Syntax:
+   	for variable in sequence:
+    	if condition:
+        	break
+   -----------------------------------
+	for i in range(5):
+    		if i == 3:
+        		break
+    		print(i)
+   ===========================================
+   #....Continue....
+   Skips the current iteration.
+
+   Syntax:
+	for variable in sequence:
+    		if condition:
+        		continue
+   ------------------------------------
+	for i in range(5):
+    		if i == 2:
+        		continue
+    		print(i)
+
+   ============================================
+   #....Pass....
+   Does nothing (used as a placeholder).
+
+   Syntax:
+	for variable in sequence:
+    		pass
+
+	
+	for i in range(3):
+    		pass
+	
+---------------------------------------------------------------------------------------------------
+2. Data Structure 
+   Python List:
+   - List is an ordered sequence of items.
+   - All the items in a list do not need to be of the same type.
+   - List is a collection of mixed data types of items.
+   - List should be represented by using square bracket [ ].
+   - For List data type,predefined class list is used.
+   - Positive and Negative index associated with the list items.
+   - List positive index should begin with 0 and negative index should begin with -1 from the last
+     element.
+   - Lists are mutable. It means once it is created, you can change it later.
+   - Subscript [] and index number is used to access any individual element from the list.
+   - We can use slice [:] operator to access the range of items from the list. 
+
+
+	a = [10, 20, 30, 40, 50]
+	print("Original List:", a)
+
+	# 1. append() - add an element at the end
+	a.append(60)
+	print("After append(60):", a)
+
+	# 2. insert() - insert element at a specific index
+	a.insert(2, 25)
+	print("After insert(2, 25):", a)
+
+	# 3. extend() - add multiple elements
+	a.extend([70, 80])
+	print("After extend([70, 80]):", a)
+
+	# 4. remove() - remove first occurrence of a value
+	a.remove(25)
+	print("After remove(25):", a)
+
+	# 5. pop() - remove element at a given index (default last)
+	popped_item =a.pop(3)
+	print("After pop(3):", a, "| Popped item:", popped_item)
+
+	# 6. index() - find index of a value
+	index= a.index(20)
+	print("Index of 20:", index)
+
+	# 7. count() - count occurrences of a value
+	count_20 = a.count(20)
+	print("Count of 20:", count_20)
+
+	# 8. sort() - sort the list
+	a.sort()
+	print("After sort():", a)
+
+	# 9. reverse() - reverse the list
+	a.reverse()
+	print("After reverse():", a)
+
+	# 10. copy() - make a shallow copy
+	new_list = a.copy()
+	print("Copy of list:", new_list)
+
+	# 11. clear() - remove all elements
+	a.clear()
+	print("After clear():", a)
+
+
+  Python Tuple:
+    - Tuple is an ordered sequence of items.
+    - All the items in a Tuple do not need to be of the same type.
+    - Tuple is a collection of mixed data types of items.
+    - Tuple should be represented by using parentheses ().
+    - For Tuple data type,predefined class tuple is used.
+    - Positive and Negative index associated with the Tuple items.
+    - Positive index should begin with 0 and negative index should begin with -1 from the last element.
+    - Tuple are immutable. It means once it is created, you can not change it later.
+    - Subscript [] and index number is used to access any particular element from the Tuple.
+    - We can use slice [:] operator to access the range of items from the Tuple
+    - Tuples are used to read only data and it is faster than list as it cannot change dynamically. 
+
+	a = (1, 2, 3, 2, 4, 5)
+
+	# 1. count() - counts occurrences of a value
+	count= a.count(2)
+	print("Count of 2:", count)
+
+	# 2. index() - finds index of first occurrence of a value
+	index = a.index(4)
+	print("Index of 4:", index)
+
+	# Convert tuple to list for mutable operations
+	b = list(a)
+	print(b)
+
+	# 3. append() equivalent - adding element
+	b.append(6)
+	print("After append:", tuple(b))
+
+	# 4. insert() equivalent - inserting element at a specific index
+	b.insert(2, 10)
+	print("After insert at index 2:", tuple(b))
+
+	# 5. remove() equivalent - removing an element
+	b.remove(2)  # removes first occurrence of 2
+	print("After removing 2:", tuple(b))
+
+	# 6. pop() equivalent - remove element by index
+	b.pop(3)
+	print("After pop at index 3:", tuple(b))
+
+	# 7. slicing (works directly on tuple)
+	print("Slice from index 1 to 4:", a[1:5])
+
+	# 8. concatenation
+	b = (7, 8)
+	combined = a + b
+	print("Concatenated tuple:", combined)
+
+	# 9. repetition
+	repeated = a * 2
+	print("Repeated tuple:", repeated)
+
+
+  Python Dictionary:
+    - Dictionary is an ordered collection of items and it should be represented by using (key:value) pairs
+      format.
+    - It is generally used when we have a huge amount of data.
+    - Dictionaries are optimized for retrieving data. We must know the key to retrieve the value.
+    - In Python, dictionaries are defined by using curly bracket {} with each item being a pair in the form
+      of key:value.
+    - Key and value can be of any data type. 
+
+
+	a = {"name": "Vaishnavi", "age": 18, "city": "Pune"}
+
+	# 1. get()
+	print("Get name:", a.get("name"))
+
+	# 2. keys()
+	print("Keys:", a.keys())
+
+	# 3. values()
+	print("Values:", a.values())
+
+	# 4. items()
+	print("Items:", a.items())
+
+	# 5. setdefault()
+	a.setdefault("country", "India")
+	print("After setdefault:", a)
+
+	# 6. update()
+	a.update({"age": 19, "city": "Mumbai"})
+	print("After update:", a)
+
+	# 7. pop()
+	a.pop("age")
+	print("After pop age:", a)
+
+	# 8. popitem()
+	a.popitem()
+	print("After popitem:", a)
+
+	# 9. clear()
+	temp = a.copy()
+	temp.clear()
+	print("After clear:", temp)
+
+	# 10. copy()
+	copy_a = a.copy()
+	print("Copy of a:", copy_a)
+
+	# 11. fromkeys()
+	new_dict = dict.fromkeys(["x", "y", "z"], 0)
+	print("From keys:", new_dict)
+
+	# 12. del
+	del a["name"]
+	print("After del name:", a)
+
+	# 13. len()
+	print("Length of dictionary:", len(a))
+
+	# 14. in operator
+	print("Is 'city' in dictionary?", "city" in a)
+
+
+  Python Set:
+    - Set is an unordered collection of unique items.
+    - Set is defined by values separated by comma inside curly bracket { }.
+    - Items in a set are not ordered.
+    - We can perform set operations like union, intersection on two sets.
+    - Set have unique values. They eliminate duplicates.
+    - Set are unordered collection of items and index numbers are not associated with it. Hence the
+      slicing operator [:] does not work. 
+
+	a = {1, 2, 3, 4, 5}
+
+	print("Original set:", a)
+
+	# 1. add()
+	a.add(6)
+	print("After add(6):", a)
+
+	# 2. update()
+	a.update([7, 8])
+	print("After update([7, 8]):", a)
+
+	# 3. remove()
+	a.remove(3)
+	print("After remove(3):", a)
+
+	# 4. discard()
+	a.discard(10)   # no error if element not present
+	print("After discard(10):", a)
+
+	# 5. pop()
+	a.pop()
+	print("After pop():", a)
+
+	# 6. copy()
+	b = a.copy()
+	print("Copy of set:", b)
+
+	# 7. clear()
+	b.clear()
+	print("After clear():", b)
+
+
+	# Create another set for set operations
+	c = {4, 5, 9, 10}
+	a = {2, 4, 5, 6, 7, 8} 
+
+	# 8. union()
+	print("Union:", a.union(c))
+
+	# 9. intersection()
+	print("Intersection:", a.intersection(c))
+
+	# 10. difference()
+	print("Difference (a - c):", a.difference(c))
+
+	# 11. symmetric_difference()
+	print("Symmetric Difference:", a.symmetric_difference(c))
+
+	# 12. len()
+	print("Length of set a:", len(a))
+	print("Length of set a:", len(c))
+
+	# 13. in operator
+	print("Is 4 in set a?", 4 in a)
+  	
+
+  String:
+
+   - String linear data structure in Python.
+   - Collection of characters is known as String.
+   - String are group of characters.
+   - In python, we can represent string using either single or double quotation.
+   - String are immutable, it means once it is created you cannot change it later.
+   - String can have positive and negative indexes.
+   - Positive index should begin with 0 and end with size-1.
+   - Negative index should start with -1 from last character.
+   - Predefined class for string is 'str'.
+
+	s = "PythonProgramming"
+	print(s[0])   # first character
+	print(s[4])   # 5th character
+	print(s[-10])   # 3rd character
+	print(s[-5])    # 5th character from end
+	print(s[1:4])   # characters from index 1 to 3
+	print(s[:3])    # from start to index 2
+	print(s[3:])    # from index 3 to end
+	print(s[::-1])   # reverse string
+
+	z = "Java"
+	for char in z:
+    		print(char)
+
+	a = "Java"
+	del a
+
+	s1 = "P" + s[1:]   # update first character
+	s2 = s.replace("Python", "PythonProgramming")  # replace word
+	print(s1)
+	print(s2)
+
+	s = "PythonProgramming"
+	print(len(s))
+
+	s = "Hello World"
+	print(s.upper())
+	print(s.lower())
+
+	s = "   Java   "
+	print(s.strip())    
+
+	s = "Python is fun"
+	print(s.replace("fun", "simple"))
+
+	s1 = "Hello"
+	s2 = "World"
+	print(s1 + " " + s2)
+
+	s = "Hello "
+	print(s * 3)
+
+======================================================================================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

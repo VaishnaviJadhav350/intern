@@ -1,0 +1,462 @@
+Week 2:
+Day 4:
+
+1. Functions:
+   -Function is a block of code.
+   - Function is a piece of code that performs particular task.
+   - Whenever we want, we can call that function
+
+   - There are two different types of functions.
+     1) Built-in functions.
+     2) User defined functions.
+
+   Built-in Functions:
+  --------------------
+   - The function which is already exists and we can just re-use it.
+   - It is also known as predefined function.
+   - We will not write definition of these functions, we can simply call these functions.
+   - Examples:
+   Following are the built-in mathematical functions.
+
+	1) min() - Return smallest number among given two numbers.
+		   m=min(20,35);
+		   m=20;
+
+	2) max() - Return largest number among given to numbers.
+		   m=max(20,35);
+		   m=35;
+
+	3) pow() - it will calculate power of given numbers.
+		   x=pow(2,3);
+		   x=8;
+
+	4) round()-It will return the rounded version of specified number.
+		   m=round(10.23)
+		   m=10;
+		   n=round(23.78);
+		   n=24;
+
+	5) abs() - It will return the non-negative value of given number.
+		   m=abs(-20);
+		   m=20;
+
+	6) ceil() - It will give the next number if it contains dot.
+			m=math.ceil(8.1);
+			print("Ceil Number=",m);
+			Ceil Number=9
+
+	7) floor() - It will give the lowest number if it contains dot.
+			m=math.floor(8.1);
+			print("floor Number=",m);
+			floor Number=8
+
+    User defined Functions:
+    ------------------------
+     - We can create user defined function for particular requirement.
+     - User defined function is a block of code which solve particular task.
+     - The main purpose of user defined function is to achieve modularity and enable resuablility of code.
+
+     - We can create user defined function using follwing two steps:
+
+    1) Function Definition:
+     - Function definition is a block of statements where we can write the code.
+     - We use def keyword for defining function.
+     - The arguments which we write with function definition is known as Formal Arguments.
+     - ParametersList is optional.
+     - Syntax:
+		def FunctionName(ParametersList):
+			block of statements
+     - Exmaple:
+		def vjtech():
+			print("This is user defined function");
+		
+    2) Calling Function:
+     - The def statement only creates function but not call it.
+     - If we want to call that function then we can use below syntax:
+     - Syntax:
+		FunctionName(Arguments);
+     - Example:
+		vjtech();
+
+     - When calling function is executed then program controller goes to function definition.
+     - After successfully execution of function body, program controller come back to end of the calling function.
+     - The arguments which we passes through the calling function is known as Actual Arguments.
+
+   Functions Arguments
+   ======================
+    - Many built-in functions or user defined functions need arguments on which they will operate.
+    - The value of argument is assigned to variable is known parameter.
+
+    - There are four types of arguments:
+    1) Required Arguments
+    2) Keyword Arguments
+    3) Default Arguments
+    4) Variable length Arguments
+
+    ***Required Arguments/Positional Arguments:
+    ------------------------------------------
+    - Required arguments are the arguments passed to a function in correct positional order.
+    - The no of arguments in the function call should match with function definition parameters.
+    - It is also known as positional arguments.
+
+    ***Keyword Arguments:
+    ---------------------
+    - Keyword arguments are related to function call.
+    - When we use keyword arguments in the function call, the caller identifies the arguments by the parameter name.
+
+    ***Default Arguments:
+    ---------------------
+    - A default argument is an argument that assumes a defualt value if a value is not provided in the function call.
+    - If we pass value to the default arguments then default value got override.
+
+    ***Variable Length Arguments/ Arbitrary argument:
+    ------------------------------------------------
+    - In many cases where we are required to process function with more numbers of arguments than we specified in the function definition.
+    - These types of arguments are known as Variable length arguments.
+    - We can declare variable length arguments using */** symbol.
+	*args → Numbers without names/ allows a function to accept any number of positional arguments
+	**kwargs → Values with names/ allows a function to accept any number of keyword arguments
+
+   # Lambda Function:
+   ----------------------
+    - A lambda function is a small anonymous function.
+    - A lambda function can take any number of arguments, but can only have one expression.
+     
+      Syntax:
+	lambda arguments : expression
+
+      Example:
+	x = lambda a : a + 10
+	print(x(5))
+
+    #... Lambda with Built-in Functions...
+    - Lambda functions are commonly used with built-in functions like map(), filter(), and sorted().
+
+    * The map() function:
+    - applies a function to every item in an iterable /  List मधील प्रत्येक value वर operation करायचा असेल
+
+    - Example:
+	nums = [1, 2, 3]
+	result = list(map(lambda x: x * 2, nums))
+	print(result)
+    ------------------------------------
+    * The filter() function:
+    - creates a list of items for which a function returns True/  Condition based values काढायच्या असतील"""
+
+    - Example:
+	nums1=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+	result = list(filter(lambda x: x % 2 != 0, nums1))
+	print(result)
+    ------------------------------------
+    * reduce() function:
+    - Multiple values combine करायच्या असतील
+
+    - Example:
+    	from functools import reduce
+	num = [1, 2, 3, 4]
+	result = reduce(lambda a, b : a+b,num)
+	print(result)
+    ------------------------------------
+    * Sort() function:
+    - The sorted() function can use a lambda as a key for custom sorting
+
+    - Example:
+	students = [(1, 50), (2, 80), (3, 60)]
+	students.sort(key=lambda x: x[1])
+	print(students)
+    ----------------------------------------------------------------------------------------------------------------------
+     #....Recursion Function....
+     - Recursion is when a function calls itself.
+     - Recursion is a common mathematical and programming concept. It means that a function calls itself. This has the benefit of meaning that you can
+       loop through data to reach a result.
+     
+     - Syntax:
+	def function_name(parameters):
+    	   if base_condition:      # Base case (stop condition)
+        	return value
+    	   else:
+        	return function_name(updated_parameters)   # Recursive call
+
+     - Example:
+	def print_num(n):
+          if n == 0:        # base case
+        	return
+          print(n)
+          print_num(n-1)    # recursive call
+	print_num(5)
+    -----------------------------------------------------------------------------------------------------------------------
+    #.....Scope.....
+    A variable is only available from inside the region it is created. This is called scope.
+
+    * Local Scope
+    - A variable created inside a function belongs to the local scope of that function, and can only be used inside that function.
+
+    - Example: 
+	def func():
+  	   x = 300
+ 	print(x)
+	func()
+    ---------------------------------------
+    * Global scope
+    - Global variables are available from within any scope, global and local
+
+	x=56
+	def func():
+    	   print(x)
+	func()
+	print(x)
+
+    - If you need to create a global variable, but are stuck in the local scope, you can use the global keyword.
+
+	def func():
+    	   global x
+    	   x=45
+    	print(x)
+	func()
+
+===================================================================================================================================================
+
+
+    *** Modules ***
+    ====================
+    - Modules are primarily the .py file which contains python programming code defining functions,clas,variables,etc.
+    - File containing .py python code is known as module.
+    - Most of time, we need to use existing python code while developing projects.
+    - We can do this using module feature of python.
+    - Writing module means simply creating .py file which can contain python code.
+    - To include module in another program, we use import statement.
+    - Module helps us to achive resuablility features in python.
+    - Follow below steps while creating module:
+    1) Create first file as python program with extension .py.This is your module file where we can write functions, classes and variables.
+    2) Create second file in the same directory which access module using import statement. Import statement should be present at top of the file.
+
+    ** user defined module:
+   ----------------------------
+    - Syntax:
+    # module_name.py
+
+	def function_name(parameters):
+    		statements
+    	return value
+
+    # import
+
+	import module_name
+	module_name.function_name(arguments)
+    -------------------------------------
+    - Example:
+    # calci.py
+
+	def add(a, b):
+    		return a + b
+	def sub(a, b):
+    		return a - b
+
+    # import
+
+	import calci
+	print(calci.add(10, 5))
+	print(calci.sub(10, 5))
+
+	         or 
+
+	from calci import add, sub
+	print(add(3, 4))
+	print(sub(4, 4))
+   ------------------------------------------------------------------------------------------------
+
+    *** Built in module:
+   ----------------------
+    Modules already available in Python.
+
+    * Math & cmath Modules:
+    - Python provided two important modules named as math & cmath using this we can perform certain operations. We can access functions related to hyperbolic,                      	trigonometric and logarithmic topics.
+
+    *Statistics Module:
+    - This module provides functions which calculate mean,mode,median,etc
+
+    * random
+    * datetime
+
+    example:
+   --------------
+    # Maths module
+    import math
+    print(math.sqrt(16))
+
+    # Random module
+    import random
+    print(random.choice([10, 20, 30]))
+
+    # sys module (system information)
+    import sys
+    print(sys.version)
+
+    # time module
+    import time
+    print(time.time())
+
+    # Calender
+    import calendar
+    print(calendar.month(2025, 1))
+
+    # Datetime
+    import datetime
+    print(datetime.date.today())
+
+===========================================================================================================================================================
+
+   *** Python Libraries***
+
+    A Python library is a collection of modules that provide ready-made functions and tools to perform specific tasks.
+    Module = single .py file
+    Library = group of modules
+
+  - Why Python Libraries are Used?
+
+    Save time
+    Reduce coding effort
+    Improve productivity
+    Used in real-world applications
+ 
+   * Types of Python Libraries:
+    1] Built in libraries
+    2] External (Third-Party) Libraries
+    3] User-Defined Libraries
+
+    1] Built-in Libraries
+
+    - Libraries that come already installed with Python.
+
+	Library	               Use
+       ---------------------------------------
+	math	     Mathematical operations
+	random	     Generate random values
+	datetime     Date & time
+	os	     Operating system tasks
+	sys	     System-related functions
+
+    - Example:
+
+        import math
+	print(math.sqrt(16))
+    -----------------------------------------------------------------------------------------------------------------------------
+
+    2] External (Third-Party) Libraries
+
+     - Libraries that must be installed using pip.
+
+	Library		Use
+       -----------------------------------------
+	numpy		Numerical calculations
+	pandas		Data analysis
+	matplotlib	Graphs & charts
+	requests	Web requests
+
+    - Example:
+	
+	import numpy
+	import pandas
+	print("NumPy and Pandas are installed")
+    -----------------------------------------------------------------
+    # numpy:
+    - NumPy (Numerical Python) is a library used for numerical calculations and working with arrays."""
+
+	import numpy as np
+
+	arr = np.array([10, 20, 30, 40, 50, 60, 70, 80, 90])
+	# operations
+	print(arr.dtype)
+	arr2 = np.array(['apple', 'banana', 'cherry'])
+	print(arr2.dtype)
+	print("Array:", arr)
+	print("Sum:", arr.sum())
+	print("Mean:", arr.mean())
+	print("Multiply by 2:", arr * 2)
+	print(arr[1])         # .......... Get the second Element
+	print(arr[2] + arr[3])          #...........Get the Addition of third and fourth element
+	print(arr[1:5])        #............Slice elements from index 1 to index 5 from the following array
+	print(arr[4:])        #............Slice elements from index 4 to the end of the array
+	print(arr[:4])         #...........Slice elements from the beginning to index 4 (not included)
+
+	for x in arr:
+  	   print(x)   #.........Iterate on the elements of the following 1-D array
+
+	newarr = arr.astype('f')          #..........Change data type from integer to float by using 'f' as parameter value
+	print(newarr.dtype)
+	x = arr.copy()         #..........Copy the array
+	print(x)
+
+	arr3 = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
+	newarr1 = arr3.reshape(4, 3)          #..........The outermost dimension will have 4 arrays, each with 3 elements
+	print(newarr1)
+
+	newarr2 = arr.reshape(2, 3, 2)
+	print(newarr2)       #..........The outermost dimension will have 2 arrays that contains 3 arrays, each with 2 elements
+
+	arr4 = np.array([[1, 2, 3], [4, 5, 6]])     #........Iterate on the elements of the following 2-D array
+	for y in arr4:
+  	   print(y)
+     -----------------------------------------------------------------------------------------------------------------------------------
+
+    3] User-Defined Libraries
+
+    - Libraries created by the programmer using own modules.
+
+    - Example structure:
+
+	mylibrary/
+	│
+	├── __init__.py
+	├── add.py
+	└── sub.py
+
+    - Example:
+
+    Step 1: Create a Folder (Library Name)
+    	    Create a folder named calculator
+
+    	    calculator/
+    ---------------------------------------
+
+    Step 2: Create Modules inside the Library
+	    File: add.py
+
+		def add(a, b):
+    		     return a + b
+
+            File: sub.py
+
+		def sub(a, b):
+    		     return a - b
+     ------------------------------------------
+
+     Step 3: Create __init__.py (Important)
+             File: __init__.py
+
+		from .add import add
+		from .sub import sub
+     ------------------------------------------
+
+     Step 4: Use the User-Defined Library
+	     File: main.py (outside the folder)
+
+		from calculator import add, sub
+		print(add(10, 5))
+		print(sub(10, 5))
+     ------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
