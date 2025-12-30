@@ -64,9 +64,10 @@ Day 2:
 	Data type specifies the type of data stored in a variable.
 
 	Data Type	Description
-	int		Integer values
+	---------------------------
+	int		    Integer values
 	float		Decimal values
-	str		String values
+	str		    String values
 	bool		True or False
 	list		Ordered, mutable
 	tuple		Ordered, immutable

@@ -36,7 +36,7 @@ arr3 = np.array([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12])
 newarr1 = arr3.reshape(4, 3)          #..........The outermost dimension will have 4 arrays, each with 3 elements
 print(newarr1)
 
-newarr2 = arr.reshape(2, 3, 2)
+newarr2 = arr3.reshape(2, 2, 3)
 print(newarr2)       #..........The outermost dimension will have 2 arrays that contains 3 arrays, each with 2 elements
 
 arr4 = np.array([[1, 2, 3], [4, 5, 6]])     #........Iterate on the elements of the following 2-D array
@@ -60,7 +60,9 @@ df = pd.DataFrame(data)
 print(df)
 
 
-# Series : One-dimensional data , Like a single column . Can store numbers, strings, etc.
+# Series : 
+"""One-dimensional data , Like a single column . Can store numbers, strings, etc."""
+
 s = pd.Series([10, 20, 30])
 print(s)
 
