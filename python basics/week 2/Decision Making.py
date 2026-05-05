@@ -48,8 +48,7 @@ else:
     print("Odd number")
 
 
-#...if-elif-else ladder...
-"""Used to check multiple conditions. Only one condition can executed"""
+
 
 marks = 75
 if marks >= 90:
@@ -61,7 +60,8 @@ elif marks >= 40:
 else:
     print("Fail")
 
-
+#...if-elif-else ladder...
+"""Used to check multiple conditions. Only one condition can executed"""
 
 ## Student Result Menu
 
