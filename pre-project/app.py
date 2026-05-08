@@ -42,14 +42,6 @@ with col2:
     ax2.set_title("Age Distribution")
     st.pyplot(fig2)
 
-# Scatter plot
-fig3, ax3 = plt.subplots()
-ax3.scatter(df['Annual Income (k$)'], df['Spending Score (1-100)'])
-ax3.set_xlabel("Income")
-ax3.set_ylabel("Spending Score")
-ax3.set_title("Income vs Spending")
-st.pyplot(fig3)
-
 # -------------------------------
 # KMeans Clustering
 # -------------------------------
